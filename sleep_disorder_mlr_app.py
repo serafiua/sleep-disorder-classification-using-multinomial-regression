@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report
 
+st.set_page_config(page_title="Sleep Disorder Prediction", layout="wide", page_icon="💤")
 st.title("💤 Sleep Disorder Prediction - Multinomial Regression")
 
 def load_data():
@@ -98,4 +99,5 @@ if submitted:
     st.text(classification_report(y_test, y_pred, target_names=encoders['Sleep Disorder'].classes_))
 
 st.markdown("---")
+
 st.caption("Model: Multinomial Logistic Regression | Data: Sleep Health and Lifestyle Dataset from Kaggle | Created by @serafiua")
